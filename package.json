@@ -1,13 +1,14 @@
 {
   "name": "@flavormingo/parsley",
-  "version": "1.0.0",
-  "description": "2kb zero-dependency markdown parser for github flavored markdown",
+  "version": "1.0.1",
+  "description": "ultra lightweight zero dependency markdown parser",
   "main": "parsley.js",
   "module": "parsley.js",
   "browser": "parsley.min.js",
   "files": [
     "parsley.js",
-    "parsley.min.js"
+    "parsley.min.js",
+    "README.md"
   ],
   "keywords": [
     "markdown",
