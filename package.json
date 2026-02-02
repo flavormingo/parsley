@@ -1,0 +1,30 @@
+{
+  "name": "@flavormingo/parsley",
+  "version": "1.0.0",
+  "description": "2kb zero-dependency markdown parser for github flavored markdown",
+  "main": "parsley.js",
+  "module": "parsley.js",
+  "browser": "parsley.min.js",
+  "files": [
+    "parsley.js",
+    "parsley.min.js"
+  ],
+  "keywords": [
+    "markdown",
+    "parser",
+    "gfm",
+    "github",
+    "lightweight",
+    "zero-dependency"
+  ],
+  "author": "flavormingo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flavormingo/parsley.git"
+  },
+  "homepage": "https://parsley.dev",
+  "bugs": {
+    "url": "https://github.com/flavormingo/parsley/issues"
+  }
+}
