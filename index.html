@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>parsley</title>
+    <meta name="description" content="2kb zero-dependency markdown parser">
+    <meta name="author" content="flavormingo">
+    <link rel="canonical" href="https://parsley.dev/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="parsley">
+    <meta property="og:title" content="parsley">
+    <meta property="og:description" content="2kb zero-dependency markdown parser">
+    <meta property="og:url" content="https://parsley.dev/">
+    <meta property="og:image" content="https://parsley.dev/img/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200">
+    <meta property="og:image:alt" content="parsley">
+    <meta name="theme-color" content="#1FD200">
+    <meta name="color-scheme" content="dark">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="parsley">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="matrix" aria-hidden="true"></canvas>
+  <main>
+    <header>
+      <h1>
+        <svg viewBox="0 0 400 400" aria-hidden="true"><path fill="currentColor" d="M320,0 C364.18278,-1.42108547e-14 400,35.81722 400,80 L400,220 C400,264.18278 364.18278,300 320,300 L200,300 L200,320 C200,364.18278 164.18278,400 120,400 L80,400 C35.81722,400 0,364.18278 0,320 L0,80 C0,35.81722 35.81722,0 80,0 L320,0 Z M203.7,82 L180.7,82 L173.529,115.4 L153.3,115.4 L147.9,137.8 L168.72,137.8 L163.309,163 L145.7,163 L140.3,185.2 L158.542,185.2 L151.5,218 L174.3,218 L181.391,185.2 L201.542,185.2 L194.5,218 L217.3,218 L224.486,185.2 L245.1,185.2 L251.1,163 L229.351,163 L234.873,137.8 L254.3,137.8 L259.7,115.4 L239.781,115.4 L247.1,82 L223.7,82 L216.528,115.4 L196.48,115.4 L203.7,82 Z M211.719,137.8 L206.308,163 L186.19,163 L191.638,137.8 L211.719,137.8 Z"/></svg>
+      </h1>
+      <p>2kb zero-dependency markdown parser</p>
+    </header>
+
+    <section aria-label="stats">
+      <dl>
+        <div>
+          <dt>size</dt>
+          <dd>2.1kb</dd>
+        </div>
+        <div>
+          <dt>deps</dt>
+          <dd>0</dd>
+        </div>
+        <div>
+          <dt>lines</dt>
+          <dd>399</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section aria-label="comparison">
+      <table>
+        <tbody>
+          <tr data-highlight>
+            <td>parsley</td>
+            <td>2.1kb</td>
+          </tr>
+          <tr>
+            <td>marked</td>
+            <td>13kb</td>
+          </tr>
+          <tr>
+            <td>markdown-it</td>
+            <td>31kb</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-label="install">
+      <figure>
+        <pre><code>npm i @flavormingo/parsley</code></pre>
+        <button type="button" aria-label="copy" data-copy="npm i @flavormingo/parsley">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" data-icon="copy"><path fill="currentColor" d="M192 0c-35.3 0-64 28.7-64 64l0 256c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-200.6c0-17.4-7.1-34.1-19.7-46.2L370.6 17.8C358.7 6.4 342.8 0 326.3 0L192 0zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-16-64 0 0 16-192 0 0-256 16 0 0-64-16 0z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" data-icon="check"><path fill="currentColor" d="M434.8 70.1c14.3 10.4 17.5 30.4 7.1 44.7l-256 352c-5.5 7.6-14 12.3-23.4 13.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l101.5 101.5 234-321.7c10.4-14.3 30.4-17.5 44.7-7.1z"/></svg>
+        </button>
+      </figure>
+      <p>or <a href="parsley.min.js" download>download</a> 5.2kb</p>
+    </section>
+
+    <footer>
+      <a href="https://github.com/flavormingo/parsley" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM252.8 8c-138.7 0-244.8 105.3-244.8 244 0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1 100-33.2 167.8-128.1 167.8-239 0-138.7-112.5-244-251.2-244zM105.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+      <p>made with love by <a href="https://mazz.digital" target="_blank" rel="noopener">mazz.digital</a></p>
+    </footer>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
