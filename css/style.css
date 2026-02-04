@@ -2,8 +2,15 @@
   font-family: 'berkeley';
   src: url('../font/berkeley.woff2') format('woff2');
   font-weight: 100 900;
-  font-style: normal;
   font-display: swap;
+}
+
+:root {
+  --black: #000;
+  --white: #aaa;
+  --muted: #444;
+  --accent: #1FD200;
+  --glow: 31, 210, 0;
 }
 
 * {
@@ -18,16 +25,13 @@ html, body {
 
 body {
   font-family: 'berkeley', monospace;
-  background: #000;
-  color: #aaa;
+  background: var(--black);
+  color: var(--white);
 }
 
 #matrix {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   z-index: -1;
 }
 
@@ -36,7 +40,6 @@ main {
   height: 100vh;
   display: grid;
   grid-template-rows: 1fr auto auto auto;
-  gap: 0;
   padding: 3rem;
 }
 
@@ -51,77 +54,77 @@ header {
 header h1 svg {
   width: 6rem;
   height: 6rem;
-  color: #1FD200;
-  filter: drop-shadow(0 0 80px rgba(31, 210, 0, 0.4)) drop-shadow(0 0 180px rgba(31, 210, 0, 0.2)) drop-shadow(0 0 280px rgba(31, 210, 0, 0.1));
+  color: var(--accent);
+  filter: drop-shadow(0 0 80px rgba(var(--glow), 0.4)) drop-shadow(0 0 180px rgba(var(--glow), 0.2)) drop-shadow(0 0 280px rgba(var(--glow), 0.1));
   animation: glow 3s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
-  from { filter: drop-shadow(0 0 80px rgba(31, 210, 0, 0.3)) drop-shadow(0 0 180px rgba(31, 210, 0, 0.15)) drop-shadow(0 0 280px rgba(31, 210, 0, 0.08)); }
-  to { filter: drop-shadow(0 0 100px rgba(31, 210, 0, 0.5)) drop-shadow(0 0 220px rgba(31, 210, 0, 0.25)) drop-shadow(0 0 320px rgba(31, 210, 0, 0.12)); }
+  from { filter: drop-shadow(0 0 80px rgba(var(--glow), 0.3)) drop-shadow(0 0 180px rgba(var(--glow), 0.15)) drop-shadow(0 0 280px rgba(var(--glow), 0.08)); }
+  to { filter: drop-shadow(0 0 100px rgba(var(--glow), 0.5)) drop-shadow(0 0 220px rgba(var(--glow), 0.25)) drop-shadow(0 0 320px rgba(var(--glow), 0.12)); }
 }
 
 header p {
   font-size: 1rem;
-  color: #aaa;
+  color: var(--white);
   text-align: center;
 }
 
-section[aria-label="stats"] {
+[aria-label="stats"] {
   padding: 2rem 0;
 }
 
-section[aria-label="stats"] dl {
+[aria-label="stats"] dl {
   display: flex;
   justify-content: center;
   gap: 4rem;
 }
 
-section[aria-label="stats"] dl > div {
+[aria-label="stats"] dl > div {
   text-align: center;
 }
 
-section[aria-label="stats"] dt {
+[aria-label="stats"] dt {
   font-size: 0.75rem;
-  color: #444;
+  color: var(--muted);
   margin-bottom: 0.25rem;
   letter-spacing: 0.1em;
 }
 
-section[aria-label="stats"] dd {
+[aria-label="stats"] dd {
   font-size: 2rem;
   font-weight: 700;
-  color: #1FD200;
+  color: var(--accent);
 }
 
-section[aria-label="comparison"] {
+[aria-label="comparison"] {
   display: flex;
   justify-content: center;
   padding: 1.5rem 0;
 }
 
-section[aria-label="comparison"] table {
+[aria-label="comparison"] table {
   border-collapse: collapse;
 }
 
-section[aria-label="comparison"] td {
+[aria-label="comparison"] td {
   padding: 0.5rem 1.5rem;
   font-size: 0.875rem;
-  color: #444;
-  border-bottom: 1px solid #444;
+  color: var(--muted);
+  border-bottom: 1px solid var(--muted);
 }
 
-section[aria-label="comparison"] td:last-child {
+[aria-label="comparison"] td:last-child {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-section[aria-label="comparison"] tr[data-highlight] td {
-  color: #1FD200;
+[aria-label="comparison"] tr[data-highlight] td {
+  color: var(--accent);
   font-weight: 600;
 }
 
-section[aria-label="install"] {
+[aria-label="install"] {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,25 +132,24 @@ section[aria-label="install"] {
   padding: 2rem 0;
 }
 
-section[aria-label="install"] figure {
+[aria-label="install"] figure {
   position: relative;
-  border: 1px solid #444;
+  border: 1px solid var(--muted);
   border-radius: 8px;
   display: flex;
   align-items: center;
 }
 
-section[aria-label="install"] pre {
+[aria-label="install"] pre {
   padding: 0.875rem 3rem 0.875rem 1.25rem;
 }
 
-section[aria-label="install"] code {
-  font-family: 'berkeley', monospace;
+[aria-label="install"] code {
+  font-family: inherit;
   font-size: 0.9rem;
-  color: #aaa;
 }
 
-section[aria-label="install"] figure button {
+[aria-label="install"] figure button {
   position: absolute;
   right: 0.5rem;
   width: 2rem;
@@ -162,40 +164,40 @@ section[aria-label="install"] figure button {
   transition: color 0.15s;
 }
 
-section[aria-label="install"] figure button svg {
+[aria-label="install"] figure button svg {
   width: 0.875rem;
   height: 0.875rem;
-  color: #444;
+  color: var(--muted);
 }
 
-section[aria-label="install"] figure button:hover svg {
-  color: #aaa;
+[aria-label="install"] figure button:hover svg {
+  color: var(--white);
 }
 
-section[aria-label="install"] figure button svg[data-icon="check"] {
+[aria-label="install"] figure button svg[data-icon="check"] {
   display: none;
-  color: #1FD200;
+  color: var(--accent);
 }
 
-section[aria-label="install"] figure button[data-copied] svg[data-icon="copy"] {
+[aria-label="install"] figure button[data-copied] svg[data-icon="copy"] {
   display: none;
 }
 
-section[aria-label="install"] figure button[data-copied] svg[data-icon="check"] {
+[aria-label="install"] figure button[data-copied] svg[data-icon="check"] {
   display: block;
 }
 
-section[aria-label="install"] > p {
+[aria-label="install"] > p {
   font-size: 0.75rem;
-  color: #444;
+  color: var(--muted);
 }
 
-section[aria-label="install"] > p a {
-  color: #1FD200;
+[aria-label="install"] > p a {
+  color: var(--accent);
   text-decoration: none;
 }
 
-section[aria-label="install"] > p a:hover {
+[aria-label="install"] > p a:hover {
   text-decoration: underline;
 }
 
@@ -209,25 +211,19 @@ footer {
 
 footer p {
   font-size: 0.75rem;
-  color: #444;
 }
 
-footer p a {
-  color: #444;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  color: #1FD200;
+footer p, footer a {
+  color: var(--muted);
 }
 
 footer a {
-  color: #444;
+  text-decoration: none;
   transition: color 0.15s;
 }
 
 footer a:hover {
-  color: #1FD200;
+  color: var(--accent);
 }
 
 footer svg {
